@@ -2,7 +2,7 @@ module.exports.config = {
  name: "info",
  version: "1.0.1", 
  hasPermssion: 0,
- credits: "AYAN CHOWDHURY", //don't change the credits please
+ credits: "AYAN",
  description: "Admin and Bot info.",
  commandCategory: "...",
 	usePrefix: true,
@@ -30,25 +30,27 @@ var link =[
 "https://i.imgur.com/6RKFoPU.mp4",
 "https://i.imgur.com/BlifvQz.mp4",
 ];
-var callback = () => api.sendMessage({body:`➢ Admin and Bot Information
+var callback = () => api.sendMessage({body:` ♛||Admin and Bot Info||♛
 
-➠ Bot Name: ${global.config.BOTNAME}
+➠Bot Name: ${global.config.BOTNAME}
 
-➠ Bot Admin: ${global.config.ADMINBOT}
+➠Bot Admin: ${global.config.ADMINBOT}
 
-➠ Bot Admin Link: ${global.config.OWNERLINK}
+➠Facebook: ${global.config.OWNERLINK}
 
-➠ Bot Prefix: ${global.config.PREFIX}
+➠Bot Prefix: ${global.config.PREFIX}
 
-➠ Bot Owner: ${global.config.BOTOWNER}
+➠status: ${global.config.STATUS}
 
-➟ UPTIME
+➠Owner name: ${global.config.BOTOWNER}
 
-➠ Today is: ${juswa} 
+➟UPTIME
 
-➠ Bot is running ${hours}:${minutes}:${seconds}.
+➠Today is: ${juswa} 
 
-➠ Thanks for using ${global.config.BOTNAME}
+➠Bot is running ${hours}:${minutes}:${seconds}.
+
+➠Thanks for using ${global.config.BOTNAME}
 `,attachment: fs.createReadStream(__dirname + "owner_video.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "owner_video.mp4")); 
 	 return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"owner_video.mp4")).on("close",() => callback());
 	};
