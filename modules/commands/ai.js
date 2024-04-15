@@ -3,7 +3,7 @@ module.exports.config = {
  version: "1.0.1", 
  hasPermssion: 0,
  credits: "AYAN",
- description: "user",
+ description: "user.",
  commandCategory: "ask",
 	usePrefix: true,
  cooldowns: 1,
@@ -29,7 +29,7 @@ gpt({
     messages: [
         {
             role: "assistant",
-            content: "It's nice to meet you.\n\nHow are you today?"
+            content: "Hello! How are you today?"
         },
         {
             role: "user",
@@ -37,7 +37,7 @@ gpt({
         },
         {
             role: "assitant",
-            content: `${nn}\n\nIt's nice to meet you.\n\nHow are you today?`
+            content: `Hello, ${nn}! How are you today?`
         }
     ],
     prompt: `${np}`,
@@ -48,7 +48,7 @@ gpt({
   const answer = data.gpt
     var msg = [];
     {
-        msg += `${nn}\n\n${answer}`
+        msg += `${answer}`
     }
     return nayan.reply({
         body: msg
