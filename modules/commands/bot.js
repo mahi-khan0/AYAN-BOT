@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "1.0.0",
 	hasPermission: 0,
 	credits: "𝐀𝐘𝐀𝐍 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘",//dont change credits
-	usePrefix: false,
+	prefix: false,
 	description: "Dont Change This Credits Otherwisw Your Bot Lol",
 	commandCategory: "GUIDE",
 	cooldowns: 5,
