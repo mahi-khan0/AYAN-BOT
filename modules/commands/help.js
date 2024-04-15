@@ -3,17 +3,16 @@ const axios = require("axios");
 
 module.exports.config = {
 	name: "help",
-	version: "1.0.2",
-	hasPermssion: 0,
-	credits: "Mirai Team",
-	description: "Beginner's Guide",
-	commandCategory: "system",
-	usages: "[command]",
+	version: "1.0.0",
+	hasPermission: 0,
+	credits: "𝐀𝐘𝐀𝐍 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘",//dont change credits
 	usePrefix: true,
-	cooldowns: 0,
+	description: "available commands by category.",
+	commandCategory: "GUIDE",
+	cooldowns: 5,
 	envConfig: {
 		autoUnsend: false,
-		delayUnsend: 20
+		delayUnsend: 2000
 	}
 };
 
@@ -127,9 +126,8 @@ let path = __dirname + `/cache/help.png`;
 		})
 	).data;
 	fs.writeFileSync(path, Buffer.from(image, "utf-8"));*/
-		const text = `𝗧𝗼𝘁𝗮𝗹 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀:『${arrayInfo.length}』\n𝗣𝗢𝗚𝗜 𝗣𝗔 𝗞𝗜𝗦𝗦 𝗣𝗪𝗘𝗗𝗘?\n\n𝗥𝗔𝗡𝗗𝗢𝗠 𝗙𝗔𝗖𝗧: ${randomQuote}`;
-		return api.sendMessage(`🔴🟡🟢\n\n░░░░█▄█ ▄▀█ ▀█ █▄▀ █▄█░░░
-░░░░░█░ █▀█ █▄ █░█ ░█░░░░\n\n◦❭❯❱ 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 & 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗬 ❰❮❬◦\n\n 𝖯𝖺𝗀𝖾 『 ${page} /${Math.ceil(arrayInfo.length/numberOfOnePage)} 』` + "\n" + msg + "\n" + text, threadID, async (error, info) => {
+		const text = `𝗧𝗢𝗧𝗔𝗟 𝗖𝗠𝗗𝗦:[${arrayInfo.length}]\n\n𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗖𝗔𝗧𝗚𝗢𝗥𝗬\n\n𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸: ➪\nhttps://www.facebook.com/AYAN.JANU.LOVE.YOU.MY.HEART`;
+		return api.sendMessage(`✓✓✓\n\n╔═════▓࿇࿇▓═════╗\n             𝐀𝐋𝐋 𝐂𝐌𝐃 𝐋𝐈𝐒𝐓\n╚═════▓࿇࿇▓═════╝\n\n 𝖯𝖺𝗀𝖾 『 ${page} /${Math.ceil(arrayInfo.length/numberOfOnePage)} 』` + "\n" + msg + "\n" + text, threadID, async (error, info) => {
 			if (autoUnsend) {
 				await new Promise(resolve => setTimeout(resolve, delayUnsend * 10000));
 				return api.unsendMessage(info.messageID);
