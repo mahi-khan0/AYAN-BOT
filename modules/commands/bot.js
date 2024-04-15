@@ -1,13 +1,16 @@
 module.exports.config = {
-  name: "xan",
-  version: "1.0.0",
-  hasPermssion: 0,
-  credits: "AYAN CHOWDHURY",//don’t change credits
-  usePrefix: true,
-  description: "Dont Change This Credits Otherwisw Your Bot Lol",
-  usages: "[ask]",
-  commandCategory: "SIM ✅",
-  cooldowns: 2
+	name: "bot",
+	version: "1.0.0",
+	hasPermission: 0,
+	credits: "𝐀𝐘𝐀𝐍 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘",//dont change credits
+	usePrefix: false,
+	description: "Dont Change This Credits Otherwisw Your Bot Lol",
+	commandCategory: "GUIDE",
+	cooldowns: 5,
+	envConfig: {
+		autoUnsend: false,
+		delayUnsend: 2000
+	}
 };
 
 module.exports.run = async function({ api, event, args, Users }) {
