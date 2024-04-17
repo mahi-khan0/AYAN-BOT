@@ -5,7 +5,7 @@ module.exports.config = {
     name: "autourl",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "jenk", // fix by jenk
+    credits: "AYAN", // fix by AYAN
     description: "Automatically download group photos/videos",
     commandCategory: "noprefix",
     usages: "autodown",
@@ -43,7 +43,7 @@ module.exports.getLink = function (url) {
     return new Promise((resolve, reject) => {
         axios({
             method: "GET",
-            url: `https://nguyenmanh.name.vn/api/autolink?url=${url}&apikey=pNKvedtJ`
+            url: `https://noobs-api.onrender.com/api/autolink?url=${url}&apikey=pNKvedtJ`
         }).then(res => resolve(res.data)).catch(err => reject(err));
     });
 }
