@@ -5,9 +5,9 @@ const { shorten } = require('tinyurl');
 module.exports.config = {
   name: "4k",
   version: "1.6.9",
-  credits: "𝑴𝑹. 𝑨𝒀𝑨𝑵",
+  credits: "dipto",
   hasPermission: 0,
-  usePrefix: true,
+  usePrefix: false,
   commandCategory: "image",
   cooldowns: 4,
   description: "Image enhancer",
@@ -20,7 +20,7 @@ module.exports.config = {
     const photoUrl = event.messageReply?.attachments[0]?.url || args.join(' ');
     
     if (!photoUrl) {
-      api.sendMessage("📝 | Please reply to a photo to proceed enhancing images...", threadID, messageID);
+      api.sendMessage("🔰 | Please reply to a photo to proceed enhancing images...", threadID, messageID);
       return;
     }
     const finalUrl = await shorten(photoUrl);
@@ -28,9 +28,9 @@ module.exports.config = {
       api.sendMessage("⏳ | Enhancing please wait...", threadID, async () => {
    try {
 
-   const { data } = await get(`https://noobs-api.onrender.com/ayan/4k?img=${encodeURIComponent(finalUrl)}&key=ayan008`);
+   const { data } = await get(`https://noobs-api.onrender.com/dipto/4k?img=${encodeURIComponent(finalUrl)}&key=dipto008`);
 
-   const result = data.ayan;
+   const result = data.dipto;
    const author = data.author;
    const ShortUrl = await shorten(result);
      
@@ -45,7 +45,7 @@ module.exports.config = {
     api.sendMessage({
       body: `
       ✅ | Successfully Enhanced Your Image...
-      🔰 | Author: 𝑴𝑹.𝑨𝒀𝑨𝑵 👑🪽 
+      🔰 | Author: 𝑴𝑹. 𝑨𝒀𝑨𝑵 👑🪽 
       ☂ | Download Link: ${ShortUrl}`,
       attachment: createReadStream(path)
     }, threadID, () => unlinkSync(path), messageID);
