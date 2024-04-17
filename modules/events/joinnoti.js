@@ -13,8 +13,8 @@ module.exports.run = async function({ api, event }) {
 	const request = require("request");
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-		api.changeNickname(`𝐓𝐎𝐌 ${global.config.BOTNAME} 【 ${global.config.PREFIX} 】`, threadID, api.getCurrentUserID());
-		return api.sendMessage(`${global.config.BOTNAME} 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗰𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱\n𝗻𝗼𝘄 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁\n\n𝗽𝗿𝗲𝗳𝗶𝘅: ${global.config.PREFIX} \n ${global.config.PREFIX} HELP FOR LIST COMMAND`, threadID);
+		api.changeNickname(`【 ${global.config.PREFIX} 】 ${global.config.BOTNAME}`, threadID, api.getCurrentUserID());
+		return api.sendMessage(`${global.config.BOTNAME}\n\nThank you for inviting me to the group!\n\nBot prefix: 【 ${global.config.PREFIX} 】\n\nTo view the list of commands, please enter: ${global.config.PREFIX}help`, threadID);
 	}
 	else {
 		try {
@@ -40,7 +40,7 @@ api.getUserInfo(parseInt(userID), (err, data) => {
 				memLength.push(participantIDs.length - i++);
 memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "{uName} 𝑾𝒆𝒍𝒍 𝒄𝒐𝒎𝒆 𝒕𝒐 {threadName} ʏᴏᴜ'ʀᴇ ᴛʜᴇ{soThanhVien}th ᴍᴇᴍʙᴇʀ ᴏɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴘʟᴇᴀsᴇ ᴇɴᴊᴏʏ\n━━━━━━━━━━━━━━━━\n*★᭄𝗖𝗿𝗲𝗱𝗶𝘁𝘀  ཫ༄𒁍≛⃝ᖇᗩYᗩᑎ" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "{uName}\n\n𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 {threadName} ʏᴏᴜ'ʀᴇ ᴛʜᴇ {soThanhVien}th ᴍᴇᴍʙᴇʀ ᴏɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴘʟᴇᴀsᴇ ᴇɴᴊᴏʏ\n━━━━━━━━━━━━━━━━━\nCmd used:-\n\nExample :\nHelp - (noprefix)\n.info\n.baby\n.pair\n.status\n.sing - (song name)" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{uName}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'you' : 'Friend')
@@ -48,10 +48,10 @@ memLength.sort((a, b) => a - b);
 			.replace(/\{threadName}/g, threadName);			
 
       var link = [
-"https://i.imgur.com/eBGEGgs.jpg",
-"https://i.imgur.com/zDOge2F.jpg",
-"https://i.imgur.com/5DeXQ31.gif",
-"https://i.imgur.com/tuOg4RU.jpg",
+"https://i.imgur.com/E49ptBn.jpg",
+"https://i.imgur.com/VaA0N6G.jpg",
+"https://i.imgur.com/pa2ZWhB.jpg",
+"https://i.postimg.cc/T20CvhtW/ezgif-2-c305128791.gif",
       ];
 				var callback = () => api.sendMessage({ body: msg, attachment: fs.createReadStream(__dirname + "/cache/leiamnashJ.jpg"), mentions }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/leiamnashJ.jpg"));
     return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/leiamnashJ.jpg")).on("close", () => callback());       
