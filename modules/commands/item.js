@@ -2,7 +2,7 @@
 module.exports.config = {
   name: "item",
   version: "1.0.0",
-  hasPermssion: 2,
+  hasPermssion: 0,
   credits: "AYAN",
   description: "item video",
   commandCategory: "Random",
