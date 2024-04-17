@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event }) {
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`【 ${global.config.PREFIX} 】 ${global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-		return api.sendMessage(`${global.config.BOTNAME}\n\nThank you for inviting me to the group!\n\nBot prefix: 【 ${global.config.PREFIX} 】\n\nTo view the list of commands, please enter: ${global.config.PREFIX}help`, threadID);
+		return api.sendMessage(`${global.config.BOTNAME}\n\nThank you for inviting me to the group!\n\nBot prefix: 【 ${global.config.PREFIX} 】\n\nTo view the list of commands, please enter: Help`, threadID);
 	}
 	else {
 		try {
