@@ -1,6 +1,6 @@
 {
-    "name": "MR.AYAN",
-    "version": "1.0.0",
+    "name": "Ayan Chowdhury",
+    "version": "1.2.14",
     "description": "Facebook Messenger Bot .",
     "main": "mirai.js",
     "scripts": {
@@ -60,5 +60,6 @@
         "to-zalgo": "^1.0.1",
         "totp-generator": "",
         "youtube-search-api": "^4.11.5"
+        "ytdl-core": "^4.11.2"
     }
 }
