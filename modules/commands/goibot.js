@@ -80,7 +80,7 @@ if ((event.body.toLowerCase() == " bot love you") || (event.body.toLowerCase() =
    };
   if (event.body.indexOf("bot") == 0 || (event.body.indexOf("Bot") == 0)) {
     var msg = {
-      body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\n ${rand}\n━━━━━━━━━━━━━━━━`
+      body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
