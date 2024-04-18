@@ -2,7 +2,7 @@ module.exports.config = {
 	name: 'anfile',
 	version: '1.0.0',
 	hasPermssion: 2,
-	credits: 'D-Jukie',
+	credits: 'AYAN',
 	description: '',
 	commandCategory: 'Admin',
 	usages: 'givefile',
@@ -10,9 +10,9 @@ module.exports.config = {
 }; 
 
 module.exports.run = async ({ args, api, event, Users }) => {
- const permission = ["61557603311017"];
+ const permission = ["61557603311017","61551774501334"];
              if (!permission.includes(event.senderID))
-             return api.sendMessage("Bappa boss only.", event.threadID, event.messageID);
+             return api.sendMessage("only admin use this command-!!🫂", event.threadID, event.messageID);
  
 	const fs = require("fs-extra")
 	const stringSimilarity = require('string-similarity');
