@@ -1,9 +1,9 @@
 const fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "bot",
+  name: "goibot",
   version: "1.0.1",
   hasPermssion: 0,
-  credits: "AYAN",
+  credits: "𝐀𝐘𝐀𝐍",
   description: "goibot",
   commandCategory: "Noprefix",
   usages: "noprefix",
@@ -76,8 +76,9 @@ if ((event.body.toLowerCase() == " bot love you") || (event.body.toLowerCase() =
    };
    
    if ((event.body.toLowerCase() == "bot kar") || (event.body.toLowerCase() == "bot kar ata")) {
-     return api.sendMessage("️Mohammad Ayan\n \nhttps://www.facebook.com/AYAN.JANU.LOVE.YOU.MY.HEART", threadID, messageID);
-   };
+     var msg = {
+       body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
+     }
   if (event.body.indexOf("bot") == 0 || (event.body.indexOf("Bot") == 0)) {
     var msg = {
       body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
