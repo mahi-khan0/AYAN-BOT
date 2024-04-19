@@ -6,7 +6,7 @@ module.exports.config = {
   credits: "𝐀𝐘𝐀𝐍",
   description: "goibot",
   commandCategory: "Noprefix",
-  usages: "noprefix",
+  usages: "[noprefix]",
   cooldowns: 5,
 };
 module.exports.handleEvent = async function({ api, event, args, Threads, Users }) {
