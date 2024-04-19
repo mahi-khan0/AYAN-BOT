@@ -76,9 +76,8 @@ if ((event.body.toLowerCase() == " bot love you") || (event.body.toLowerCase() =
    };
    
    if ((event.body.toLowerCase() == "bot kar") || (event.body.toLowerCase() == "bot kar ata")) {
-     var msg = {
-       body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
-     }
+     return api.sendMessage("আয়ান বস আমাকে বানাইছে-!!👀", threadID, messageID);
+      };
   if (event.body.indexOf("bot") == 0 || (event.body.indexOf("Bot") == 0)) {
     var msg = {
       body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
