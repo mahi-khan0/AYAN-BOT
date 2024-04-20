@@ -1,13 +1,14 @@
 module.exports.config = {
   name: "auto",
-  version: "1.0.0",
+  version: "1.6.9",
   credits: "MR.AYAN",
   hasPermission: 0,
-  usePrefix: true,
-  description: "DOWNLOAD VIDEO FOR YOU",
+  usePrefix: false,
   commandCategory: "user",
-  cooldowns: 5,
-};
+  cooldowns: 4,
+  description: "all video downloaded",
+  usage: "all video downloaded",
+  };
 start: async function({ nayan, events, args }) {},
 handleEvent: async function ({ api, event, args }) {
     const axios = require("axios")
