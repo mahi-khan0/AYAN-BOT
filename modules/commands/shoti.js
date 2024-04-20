@@ -1,13 +1,17 @@
 module.exports.config = {
   name: "shoti",
-  version: "2.0.0",
-  permission: 0,
-  credits: "MR.AYAN.2X",
-  description: "Random video.",
-  prefix: true,
-  category: "Media",
-  usages: "hot girl video",
+  version: "1.0.0",
+  hasPermssion: 0,
+  credits: "MR.AYAN",
+  description: "hot girl",
+  commandCategory: "Hình ảnh",
+  usages: "[hot girl]",
   cooldowns: 5,
+  dependencies: {
+    "request":"",
+    "fs-extra":"",
+    "axios":""
+  }
 };
 
 module.exports. run = async ({ api, event, args }) => {
