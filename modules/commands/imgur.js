@@ -2,7 +2,7 @@ module.exports.config = {
   name: "imgur",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "MR.AYAN",
+  credits: "NAYAN",// cmd convert to MR.AYAN **//
   description: "Create Image&video link",
   commandCategory: "Image",
   cooldowns: 1,
@@ -15,7 +15,7 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
     const axios = global.nodemodule['axios'];
-  const apis = await axios.get('https://raw.githubusercontent.com/Ariyan-MA/MR.AYAN/main/api.json')
+  const apis = await axios.get('https://raw.githubusercontent.com/MR-NAYAN-404/NAYAN-BOT/main/api.json')
   const n = apis.data.api
     const linkanh = event.messageReply.attachments[0].url || args.join(" ");
     if (!linkanh)
@@ -28,4 +28,4 @@ module.exports.run = async ({ api, event, args }) => {
     catch (e) {
         return api.sendMessage('[âšœï¸]âžœ An error occurred while executing the command', event.threadID, event.messageID);
     }
-}; 
+};
