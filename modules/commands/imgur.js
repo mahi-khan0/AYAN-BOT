@@ -28,4 +28,4 @@ module.exports.run = async ({ api, event, args }) => {
     catch (e) {
         return api.sendMessage('[âšœï¸]âžœ An error occurred while executing the command', event.threadID, event.messageID);
     }
-};
+}; 
