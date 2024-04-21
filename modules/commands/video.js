@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "video",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "MR.AYAN",
+	credits: "CatalizCS",
 	description: "Play video via YouTube link or search keyword",
 	commandCategory: "media",
 	usages: "video [Text]",
@@ -14,7 +14,7 @@ module.exports.config = {
 		"axios": ""
 	},
 	envConfig: {
-		"YOUTUBE_API":   "AIzaSyDC-PYP4E1bD2_RauVJBnTSkvUNxkxSQcc"
+		"YOUTUBE_API":   "AIzaSyDBOpnGGz225cPwHlJQs8OMRtxOjSUm73I"
 	}	
 };
 
@@ -166,4 +166,4 @@ return api.sendMessage({attachment: imgthumnail, body: body}, event.threadID,(er
   
   
   
-}
+} 
