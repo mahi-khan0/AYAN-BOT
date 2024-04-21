@@ -23,7 +23,7 @@ module.exports.run = async ({ api, event, args }) => {
     try {
       var tpk = `",`;
         const allPromise = (await Promise.all(event.messageReply.attachments.map(item => axios.get(`${n}/imgurv2?link=${encodeURIComponent(item.url)}`)))).map(item => item.data.uploaded.image);
-        return api.sendMessage(`"` + allPromise.join('"\n"') + tpk, event.threadID, event.messageID);
+        return api.sendMessage(`𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖸𝗈𝗎𝗋 𝖨𝗆𝗀𝗎𝗋 𝖴𝗋𝗅 𝖫𝗂𝗇𝗄✨🥀\n\n` + allPromise.join('"\n"') + tpk, event.threadID, event.messageID);
     }
     catch (e) {
         return api.sendMessage('[âšœï¸]âžœ An error occurred while executing the command', event.threadID, event.messageID);
